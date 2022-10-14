@@ -3,18 +3,20 @@
 <p><%= @article.body %></p>
 
 <ul>
-  <li><%= link_to "Edit", edit_article_path(@article) %></li>
-  <li><%= link_to "Destroy", article_path(@article), data: {
+  <li><%= link_to "Editar", edit_article_path(@article) %></li>
+  <li><%= link_to "Deletar", article_path(@article), data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
                   } %></li>
 </ul>
 
 
-<h2>Comments</h2>
+<h2>Comentários:</h2>
 <%= render @article.comments %>
 
 
 
-<h2>Add a comment:</h2>
+<h2>Adicionar Comentário:</h2>
 <%= render 'comments/form' %>
+
+<%= link_to "Página inicial", root_path%>
