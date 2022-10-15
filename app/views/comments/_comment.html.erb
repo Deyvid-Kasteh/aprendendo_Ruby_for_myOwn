@@ -8,4 +8,10 @@
     <strong>Comentário</strong>
     <%= comment.body %>
   </p>
+  <p>
+  <%= link_to "Deletar comentário", [comment.article, comment], data: {
+                  turbo_method: :delete,
+                  turbo_confirm: "Você tem certeza?"
+                  } %>
+  </p>
 <% end %>
