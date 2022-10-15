@@ -1,9 +1,11 @@
-<p>
-  <strong>Usuário</strong>
-  <%= comment.commenter %>
-</p>
+<% unless comment.archived?%>
+  <p>
+    <strong>Usuário</strong>
+    <%= comment.commenter %>
+  </p>
 
-<p>
-  <strong>Comentário</strong>
-  <%= comment.body %>
-</p>
+  <p>
+    <strong>Comentário</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
